@@ -1,11 +1,9 @@
 terraform {
   backend "s3" {
-    bucket         = "your-s3-bucket-name"
+    bucket         = "arjunsterraformstatebucket"
     key            = "terraform/statefile.tfstate"
     region         = "us-east-1"
-    dynamodb_table = "your-dynamodb-table"  # Optional but recommended for state locking
-    encrypt        = true
-  }
+    }
 }
 
 provider "aws" {
